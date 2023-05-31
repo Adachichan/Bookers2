@@ -30,6 +30,13 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       ## Lockable
       # t.integer  :failed_attempts, default: 0, null: false # Only if lock strategy is :failed_attempts
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
+
+      #名前を保存するカラム
+      t.string :name
+
+      #紹介文を保存するカラム
+      t.string :introduction
+
       # t.datetime :locked_at
 
 
