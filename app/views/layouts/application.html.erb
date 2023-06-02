@@ -13,29 +13,29 @@
   <header>
     <nav class = "navbar navbar-expand-lg navbar-dark bg-secondary">
       <div class = "container">
-        <%= link_to "Bookers2", "/", class: "navbar-brand" %>
+        <%= link_to "Bookers2", root_path, class: "navbar-brand" %>
         <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarNavDropdown" aria-controls = "navbarNavDropdown" aria-expanded = "false" aria-label = "Toggle navigation">
           <span class = "navbar-toggler-icon"></span>
         </button>
         <div class = "collapse navbar-collapse" id = "navbarNavDropdown">
           <ul class = "navbar-nav ml-auto">
             <li class = "nav-item">
-              <%= link_to "/", class: "nav-link text-light" do %>
+              <%= link_to root_path, class: "nav-link text-light" do %>
                 <i class = "fas fa-home"></i>&ensp;Home&ensp;
               <% end %>
             </li>
             <li class = "nav-item">
-              <%= link_to "/", class: "nav-link text-light" do %>
+              <%= link_to about_path, class: "nav-link text-light" do %>
                 <i class = "fas fa-link"></i>&ensp;About&ensp;
               <% end %>
             </li>
             <li class = "nav-item">
-              <%= link_to "/", class: "nav-link text-light" do %>
+              <%= link_to new_user_registration_path, class: "nav-link text-light" do %>
                 <i class = "fas fa-user-plus"></i>&ensp;Sign up&ensp;
               <% end %>
             </li>
             <li class = "nav-item">
-              <%= link_to "/", class: "nav-link text-light" do %>
+              <%= link_to new_user_session_path, class: "nav-link text-light" do %>
                 <i class = "fas fa-sign-in-alt"></i>&ensp;Log in&ensp;
               <% end %>
             </li>
