@@ -19,26 +19,46 @@
         </button>
         <div class = "collapse navbar-collapse" id = "navbarNavDropdown">
           <ul class = "navbar-nav ml-auto">
-            <li class = "nav-item">
-              <%= link_to root_path, class: "nav-link text-light" do %>
-                <i class = "fas fa-home"></i>&ensp;Home&ensp;
-              <% end %>
-            </li>
-            <li class = "nav-item">
-              <%= link_to about_path, class: "nav-link text-light" do %>
-                <i class = "fas fa-link"></i>&ensp;About&ensp;
-              <% end %>
-            </li>
-            <li class = "nav-item">
-              <%= link_to new_user_registration_path, class: "nav-link text-light" do %>
-                <i class = "fas fa-user-plus"></i>&ensp;Sign up&ensp;
-              <% end %>
-            </li>
-            <li class = "nav-item">
-              <%= link_to new_user_session_path, class: "nav-link text-light" do %>
-                <i class = "fas fa-sign-in-alt"></i>&ensp;Log in&ensp;
-              <% end %>
-            </li>
+            
+            <% if user_signed_in? %>
+              <li class = "nav-item">
+                <%= link_to root_path, class: "nav-link text-light" do %>
+                  <i class = "fas fa-home"></i>&ensp;Home&ensp;
+                <% end %>
+              </li>
+
+
+
+
+              <li class = "nav-item">
+                <%= link_to destroy_user_session_path, method: :delete, class: "nav-link text-light" do %>
+                  <i class="fas fa-sign-out-alt"></i>&ensp;Log out&ensp;
+                <% end %>
+              </li>
+              
+            <% else %>
+              <li class = "nav-item">
+                <%= link_to root_path, class: "nav-link text-light" do %>
+                  <i class = "fas fa-home"></i>&ensp;Home&ensp;
+                <% end %>
+              </li>
+              <li class = "nav-item">
+                <%= link_to about_path, class: "nav-link text-light" do %>
+                  <i class = "fas fa-link"></i>&ensp;About&ensp;
+                <% end %>
+              </li>
+              <li class = "nav-item">
+                <%= link_to new_user_registration_path, class: "nav-link text-light" do %>
+                  <i class = "fas fa-user-plus"></i>&ensp;Sign up&ensp;
+                <% end %>
+              </li>
+              <li class = "nav-item">
+                <%= link_to new_user_session_path, class: "nav-link text-light" do %>
+                  <i class = "fas fa-sign-in-alt"></i>&ensp;Log in&ensp;
+                <% end %>
+              </li>
+            <% end %>
+            
           </ul>
         </div>
       </div>
