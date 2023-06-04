@@ -4,9 +4,8 @@
     <div class = "col-md-3">
 
 
-
       <h2 class = "mt-3">New Book</h2>
-      <%= form_with model: @book do |f| %>
+      <%= form_with model: @post_book do |f| %>
         <div>
           <label class = "mt-2">Title</label><br />
           <%= f.text_field :title %>
@@ -33,7 +32,7 @@
           <tbody>
             <tr>
               <td>
-
+                <%= image_tag 'no_image.jpg', :size => '80x80' %>
               </td>
               <td>
                 <%= link_to "#{book.title}", book_path(book.id), class:"text-dark" %>
@@ -46,6 +45,6 @@
         <% end %>
       </table>
     </div>
-    
+
   </div>
 </div>
