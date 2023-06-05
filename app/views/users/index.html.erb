@@ -8,22 +8,22 @@
       <table class = "table table-hover table-striped mt-3">
         <thead>
           <tr>
+            <th>image</th>
+            <th>name</th>
             <th></th>
-            <th>Title</th>
-            <th>Opinion</th>
           </tr>
         </thead>
-        <% @books.each do |book| %>
+        <% @users.each do |user| %>
           <tbody>
             <tr>
               <td>
-                <%= image_tag 'no_image.jpg', :size => '80x80' %>
+                <%= image_tag user.get_profile_image(80,80), class:"bd-placeholder-img align-self-center mx-3";  %>
               </td>
               <td>
-                <%= link_to "#{book.title}", book_path(book.id) %>
+                <%= user.name %>
               </td>
               <td>
-                <%= book.body %>
+                <%= link_to "show", user_path(user.id) %>
               </td>
             </tr>
           </tbody>
