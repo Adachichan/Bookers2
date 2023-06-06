@@ -9,10 +9,10 @@
         <tbody>
           <tr>
             <td>
-              <%= link_to user_path(@user.id) do %>
-                <%= image_tag @user.get_profile_image(80,80) %>
+              <%= link_to user_path(@book.user.id) do %>
+                <%= image_tag @book.user.get_profile_image(80,80), class:"bd-placeholder-img align-self-center mx-3"; %>
                 <div class = "mt-2">
-                  <%= @user.name %>
+                  <%= @book.user.name %>
                 </div>
               <% end %>
             </td>
