@@ -1,6 +1,19 @@
 <div class = "container px-5 px-sm-0">
-  <div class = "row">
 
+  <% if @post_book.errors.any? %>
+    <div class = "my-4">
+      <span class = "text-white bg-danger">
+        &emsp;<%= @post_book.errors.count %>errors prohibited this obj from being saved:&emsp;
+      </span>
+      <ul>
+        <% @post_book.errors.full_messages.each do |message| %>
+          <li class = "text-danger"><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class = "row">
     <%= render 'list', {user: @user, post_book: @post_book} %>
 
     <div class = "col-md-8 offset-md-1 mt-3">

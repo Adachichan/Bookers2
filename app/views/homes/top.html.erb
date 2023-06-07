@@ -1,10 +1,11 @@
-<% flash.each do |message_type, message| %>
-  <div class = "mx-5 my-4">
-    <span class="alert alert-<%= message_type %> text-white bg-success"><%= message %></span>
-  </div>
-<% end %>
-
 <div class = "container mt-4">
+
+  <% flash.each do |message_type, message| %>
+    <div class = "my-4">
+      <span class="alert alert-<%= message_type %> text-white bg-success"><%= message %></span>
+    </div>
+  <% end %>
+
   <div class = "row">
     <div class = "mx-auto col-11 col-sm-10 col-lg-8 col-xl-6">
       <h1>
