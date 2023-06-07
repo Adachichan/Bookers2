@@ -1,3 +1,9 @@
+<% flash.each do |message_type, message| %>
+  <div class = "mx-5 my-4">
+    <span class="alert alert-<%= message_type %> text-white bg-success"><%= message %></span>
+  </div>
+<% end %>
+
 <div class = "container px-5 px-sm-0">
   <div class = "row">
 
